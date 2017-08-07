@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+       * { box-sizing: border-box;}
+       body {background-color: green; animation: bg-transition 5s infinite alternate}
+       
+       iframe { display: none;}
+       
+       @keyframes bg-transition {
+         0% {background-color: red;}
+         17% {background-color: orange;}
+         32% {background-color: yellow;}
+         47% {background-color: lime;}
+         62% {background-color: blue;}
+         77% {background-color: indigo;}
+         100% {background-color: violet;}
+       }
+              
+       @-moz-keyframes spin {
+         from { -moz-transform: translate(-50%, -50%) rotate(0deg); }
+         to { -moz-transform: translate(-50%, -50%) rotate(360deg); }
+       }
+       @-webkit-keyframes spin {
+         from { -webkit-transform: translate(-50%, -50%) rotate(0deg); }
+         to { -webkit-transform: translate(-50%, -50%) rotate(360deg); }
+       }
+       @keyframes spin {
+         from {transform: translate(-50%, -50%) rotate(0deg);}
+         to {transform: translate(-50%, -50%) rotate(360deg);}
+       }
+       .spinner {
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         
+         -webkit-animation-name: spin;
+         -webkit-animation-duration: 3000ms;
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-timing-function: linear;
+         -moz-animation-name: spin;
+         -moz-animation-duration: 3000ms;
+         -moz-animation-iteration-count: infinite;
+         -moz-animation-timing-function: linear;
+         -ms-animation-name: spin;
+         -ms-animation-duration: 3000ms;
+         -ms-animation-iteration-count: infinite;
+         -ms-animation-timing-function: linear;
+    
+         animation-name: spin;
+         animation-duration: 3000ms;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+       }
+    </style>
+  </head>
+     <body>
+        <img class="spinner" src="luana.png"> <!--src="https://i.imgur.com/SFWDGlL.png"-->
+        <audio controls loop autoplay style="display:none;">
+        <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+      </body>
+</html>
