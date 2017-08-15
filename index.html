@@ -5,9 +5,9 @@
     <style>
        * { box-sizing: border-box;}
        body {background-color: green; animation: bg-transition 5s infinite alternate}
-       
+
        iframe { display: none;}
-       
+
        @keyframes bg-transition {
          0% {background-color: red;}
          17% {background-color: orange;}
@@ -17,7 +17,7 @@
          77% {background-color: indigo;}
          100% {background-color: violet;}
        }
-              
+
        @-moz-keyframes spin {
          from { -moz-transform: translate(-50%, -50%) rotate(0deg); }
          to { -moz-transform: translate(-50%, -50%) rotate(360deg); }
@@ -32,9 +32,9 @@
        }
        .spinner {
          position: fixed;
-         top: 50%;
+         top: 30%;
          left: 50%;
-         
+
          -webkit-animation-name: spin;
          -webkit-animation-duration: 3000ms;
          -webkit-animation-iteration-count: infinite;
@@ -47,18 +47,31 @@
          -ms-animation-duration: 3000ms;
          -ms-animation-iteration-count: infinite;
          -ms-animation-timing-function: linear;
-    
+
          animation-name: spin;
          animation-duration: 3000ms;
          animation-iteration-count: infinite;
          animation-timing-function: linear;
        }
+       #bday {
+         position: fixed;
+         top: 70%;
+         left: 30%;
+         max-width:30%;
+         max-height:30%;
+       }
     </style>
   </head>
      <body>
-        <img class="spinner" src="bernardo.png"> <!--src="https://i.imgur.com/SFWDGlL.png"-->
+        <img id="bday" src="bday.png" style="display:none"/>
+        <img class="spinner" src="head.png"-->
         <audio controls loop autoplay style="display:none;">
-        <source src="audio.mp3" type="audio/mpeg">
+          <source src="audio.mp3" type="audio/mpeg">
         </audio>
+        <script>
+          setTimeout(function(){
+            document.getElementById('bday').style.display = 'block'
+          },16500);
+        </script>
       </body>
 </html>
